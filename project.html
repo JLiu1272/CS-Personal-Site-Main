@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="title">
+		<center><h1>Jennifer Liu's Personal Site</h1></center>
+		<p>A website showcasing my work</p>
+
+		<div class="navbar">
+		  <a href="about.html">About</a>
+		  <div class="dropdown">
+		    <button class="dropbtn" href="project.html">Projects 
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <a href="#GPS_Classifier">GPS Classifier</a>
+		      <a href="#Recipe_Replacement">Recipe Replacement</a>
+		      <a href="#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a>
+		    </div>
+		  </div>
+		  <a href="project.html">Internship</a>
+		  <a href="project.html">Personal Opinions</a>
+		  <a href="project.html">Resume</a> 
+		</div>
+	</div>
+
+	<h1 id="project">Projects</h1>
+
+	<!-- GPS Classifier -->
+	<div id="GPS_Classifier">
+		<h2>Using Data Mining Techniques to predict when car stops, and turns</h2>
+		<p>We were given a set of GPS data, and were asked to predict when a car
+		   stopped due to a stop sign or traffic light, and when a car turned left or right. Additionally, the GPS data was made of many paths, to eliminate the clutters, K-Means was used to agglomerate paths and remove issues related to dilution of precision.</p>
+		<p><strong>Methods Used:</strong> DBScan, K-Means, Decision Tree Metholodigies</p>
+		<p><strong>Teammates:</strong> Joe Golden, Niccolo Dehicchio</p> 
+		<strong>Link to Paper:</strong>
+		<a href="images/write_ups/CSCI420PROJECT_WRITEUP.pdf">Making Predictions with Vehicle's GPS Data</a>
+		<br>
+		<strong>Link to Github:</strong>
+		<a href="https://github.com/JLiu1272/csci420_proj1">GPS Predictions Github</a>
+	</div>
+
+	<!-- Recipe Replacement --> 
+	<div id="Recipe_Replacement">
+		<h2>Using Word Embedding to automate Recipe Replacement</h2>
+		<p>In this project, we explore the possibility of creating a model that can identify replacement for an ingredient. For instance, if the query was butter, it should discover that margarine is similar to butter, so that is 1 potential replacement. The applications for this are numerous: along with aiding individuals with allergies and dietary restrictions, this can also help cooks understand how to use ingredients they already have. The idea is to transform ingredients into embeddings. With ingredients represented as embeddings, cosine similarity can be used to find the closest replacement.
+		</p>
+		<strong>Paper Available Below:</strong>
+		<a href="images/write_ups/RecipeReplacement.pdf" class="button fit">Using Word Embedding to Automate Recipe Replacement Research Paper</a>
+		<br/>
+		<strong>Link to Github</strong>
+		<a href="https://github.com/JLiu1272/RecipeSubsitutionUsingWordEmbedding">Research Github</a>
+
+		<h2>Predicting language of text (Dutch/English) using Decision Tree and Adaboost</h2>
+		<p>I chose 8 features when making the the Decision Tree. The features used are detailed
+		in the paper. The decision tree is also written from scratch (i.e does not use sci-kit learn). The classifier has a 99% accuracy. Details about the training and testing data are available in the paper</p>
+		<strong>Link to Paper:</strong>
+		<a href="images/write_ups/LanguagePrediction_Writeup.pdf">Language Prediction using Decision Tree and Adaboost</a>
+		<br/>
+		<strong>Link to Github:</strong>
+		<a href="https://github.com/JLiu1272/LanguagePredictionUsingDecisionTree">Language Prediction Github</a>
+	</div>
+
+	<!-- Data Mining Fundamental Concepts Implementations --> 
+	<div id="DM_Fundamentals">
+		<h2>Implementation of Fundamental Data Mining Concepts from Scratch</h2>
+		<h3>Concepts implemented include:</h3>
+		<ul>
+			<li>Agglomeration (Agglomerated locations on a map)</li>
+			<li>Otsu's Method (Used method to find best car speed when considering whether someone is speeding or not)</li>
+			<li>PCA (Projected 120 dimension data onto 3 dimension)</li>
+			<li>KNN (Used KNN to classify differnt types of shoppers at a grocery store)</li>
+			<li>K-Means (performed k-means on carefully constructed data)</li>
+		</ul>
+		<strong>All implementations are compiled in this github link: </strong>
+		<a href="https://github.com/JLiu1272/DataMiningFundamentals">Fundamental Concept Implementations</a>
+
+		<h3>K-Means Result</h3>
+		<a href="https://github.com/JLiu1272/DataMiningFundamentals/blob/master/kMeans.py">K-Means Github Code</a>
+		<br/>
+		<img src="images/photos/KMeans_Result.png" alt="K-Means Result" width="500" height="333">
+
+		<h3>Agglomeration Result on random map locations</h3>
+		<a href="https://github.com/JLiu1272/DataMiningFundamentals/blob/master/Agglomeration.py">Agglomeration Github Code</a>
+		<br/>
+		<img src="images/photos/agglomeration.png" alt="Agglomeration Result" width="650" height="300">
+
+		<h3>PCA Visual Results</h3>
+		<a href="https://github.com/JLiu1272/DataMiningFundamentals/blob/master/PCA_and_KNN.py">PCA Github Code</a>
+		<br/>
+		<p>First, we agglomerated the data points. Then, we used PCA to project 120 Dimensional data to 3D data point. After projecting it, we were able to visualise it as a 3D plot</p> 
+		<img src="images/photos/PCA_Agglomeration.png" width="700" height="500">
+	</div>
+
+	<h2>LIUEC Management Tool V2</h2>
+	<p>A webpage for my father's chinese medical clinic. Due to confidentiality
+	issues, the webpage cannot be shared on this site</p>
+	<h3>Functions:</h3>
+	<ul>
+		<li>Create calendar appointment</li>
+		<li>View patient's information. (i.e patient appointment history, 
+			patient medication records)
+		<li>Upload patient medical records</li>
+		<li>Message Board: Allow internal workers to inform each
+		other about important details</li>
+	</ul>
+
+
+	<h2>Prototyped a E-Wallet System for Octopus (A company based in HK)</h2>
+	<p>
+		In Hong Kong, Octopus is a major means of payment for many of us, especially on a subway. Octopus is considered a FinTech company in Hong Kong. In was originated to allow consumers to pay using an RFID based card. This payment is available in many different places such as grocery stores, subway etc…
+	</p>	 
+	<p>
+		I created a prototype version demonstrating how Octopus can be transformed from being a RFID to a NFC based card. In other words, transforming Octopus to be an E-Wallet system. However, I did not realize that they had already built something similar and far better than what I could envision. Despite my lack of research on this matter, they were kind enough to invite me to their headquarter for a visit and taught me a lot about their design and factors they had to consider while building such an e-wallet system.
+	</p>
+	<h2>Technologies Used</h2>
+	<ul>
+		<li>NFC/RFID Adafruit Shield</li>
+		<li>Arduino Board</li>
+		<li>Android Development (Java)</li>
+		<li>Flask for API</li>
+		<li>SQL for DB</li>
+	</ul>
+
+	<p>Below is a paper describing the implementation, logistics, and technological consideration of this project</p>
+	<ul class="actions fit">
+		<li><a href="images/write_ups/PhoneDrivenPayment_Octopus.pdf" class="button fit">Octopus E-Wallet Proposal</a></li>
+	</ul>	
+	<h3>Demonstration of Prototype</h3>
+	<iframe src="https://player.vimeo.com/video/253318193" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<p><a href="https://vimeo.com/253318193">Octopus E-Wallet System Demo</a> from <a href="https://vimeo.com/user11660598">Jennifer</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+	<h2> SMIF (Smart Meals Intelligent Fridge) </h2>
+	<p>Teammates: Harshvardhan Gupta, Kyaw Khant Nyar, Robert Aguilera, Christine Van, Candy Wang</p>
+	<p> 1st Prototype has been completed. </p>
+	<p>
+		Created an IOT device that will address 2 problems (Wasting food and Eating Unhealthy). We called it SMIF. It stands for Smart Meals, Intelligent Fridge.
+		<br/><br/> 
+		It does several things:
+		<ol>
+			<li>Keeps track of what you eat</li>
+			<li>It gives you information about the food in your fridge (i.e Calories/Serving, Fat)</li>
+			<li>It suggests recipe based on what is available on your fridge</li>
+			<li>It notifies you when food when food is about to go bad.</li>
+		</ol>  
+	</p>
+	<p>
+		More details can be found: 
+		<a href="https://drive.google.com/drive/folders/0B-zf16oS-5LWTlVhNEpQRkpPNUU?usp=sharing">SMIF Drive Folder</a>
+	</p>
+	<img src="images/smif_poster.png" width="100%" height="100%" alt="" />
+	<h3>Demonstration of Prototype</h3>
+	<iframe src="https://player.vimeo.com/video/337913145" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+	<h2>Technologies Used</h2>
+	<ul>
+		<li>AWS</li>  
+	    <li>Swift 3</li>
+	    <li>BeautifulSoup Python Library for Web Scraping</li>
+	    <li>Python, Tensorflow (Image Prediction)</li>
+	    <li>PHP</li>
+	    <li>MySQL</li>    
+	</ul>
+</body>
+</html>
