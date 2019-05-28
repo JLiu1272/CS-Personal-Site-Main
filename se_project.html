@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="style.css">-->
+	<title>Jennifer Liu Personal Site</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Header -->
@@ -9,121 +15,118 @@
 		<center><h1>Jennifer Liu's （廖智盈）Personal Site</h1></center>
 		<center><p>A maker, a lifelong learner, a tech enthusiast</p></center>
 
-		<div class="navbar">
-		  <a href="index.html">About</a>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">AI/ML Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="ds_project.html#GPS_Classifier">GPS Classifier</a>
-		      <a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a>
-		      <a href="ds_project.html#Language_Prediction">Language Prediction</a>
-		      <a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a>
-		      <a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a>
-		    </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="index.html">About</a></li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">AI/ML Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="ds_project.html#GPS_Classifier">GPS Classifier</a></li>
+		          <li><a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a></li>
+		          <li><a href="ds_project.html#Language_Prediction">Language Prediction</a></li>
+		          <li><a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a></li>
+		          <li><a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software Engineer Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a></li>
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a></li>
+		          <li><a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a></li>
+		          <li><a href="se_project.html#youtube_randomizer">Youtube Randomizer</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SMIF (Coming Soon) <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="smif_startup.html#about_smif">About SMIF</a></li>
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">Prototype</a></li>-->
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">We are hiring</a></li>-->
+		        </ul>
+		      </li>
+		      <li><a href="internship.html">Internship</a></li>
+		      <li><a href="resume.html">Resume</a></li>
+		    </ul>
 		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="se_project.html">Software Engineer Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a>
-		      <a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a>
-		      <a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a>
-		      <a href="se_project.html#youtube_randomizer">Youtube Randomizer</a>
-		    </div>
-		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">SMIF (Coming Soon)
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="smif_startup.html#about_smif">About SMIF</a>
-		      <!--<a href="#">Prototype</a>-->
-		      <!--<a href="#">We are hiring</a>-->
-		    </div>
-		  </div>
-		  <a href="internship.html">Internship</a>
-		  <a href="resume.html">Resume</a> 
-		</div>
+		</nav>
 	</div>
 
 	<center><h1 id="project">Software Engineering Related Projects</h1></center>
 
-	<!-- LIUEC Management Tool V1 -->
-	<div id="LIUEC_ManagementTool_V1">
-		<h2>LIUEC Management Tool V1</h2>
-		<p>A webpage for my father's chinese medical clinic. Due to confidentiality
-		issues, the webpage cannot be shared on this site.</p>
-		<iframe src="https://player.vimeo.com/video/337966562" width="640" height="355" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-		<h3>Functions:</h3>
-		<ul>
-			<li>Create appointments for patient on specific dates</li>
-			<li>View patient's information. (i.e patient appointment history, 
-				patient medical records)
-			<li>Upload patient medical records</li>
-			<li>Automatically logs out, if site is inactivate for more than a certain
-			amount of time</li>
-			<li>Message Board: Allow internal workers to inform each
-			other about important details</li>
-		</ul>
-		<h3>Technologies Used</h3>
-		<ul>
-			<li>Flask</li>
-			<li>AngularJS</li>
-			<li>MongoDB</li>
-			<li>AWS S3, Cloudfront, Elastic Beanstalk</li>
-		</ul>
-	</div>
+	<div class="container">
+		<!-- LIUEC Management Tool V1 -->
+		<div id="LIUEC_ManagementTool_V1">
+			<h2>LIUEC Management Tool V1 (2017 - Present)</h2>
+			<p>A webpage for my father's chinese medical clinic. Due to confidentiality
+			issues, the webpage cannot be shared on this site.</p>
+			<iframe src="https://player.vimeo.com/video/337966562" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			<h3>Functions:</h3>
+			<ul>
+				<li>Create appointments for patient on specific dates</li>
+				<li>View patient's information. (i.e patient appointment history, 
+					patient medical records)
+				<li>Upload patient medical records</li>
+				<li>Automatically logs out, if site is inactivate for more than a certain
+				amount of time</li>
+				<li>Message Board: Allow internal workers to inform each
+				other about important details</li>
+			</ul>
+			<h3>Technologies Used</h3>
+			<ul>
+				<li>Flask</li>
+				<li>AngularJS</li>
+				<li>MongoDB</li>
+				<li>AWS S3, Cloudfront, Elastic Beanstalk</li>
+			</ul>
+		</div>
 
-	<!-- LIUEC Management Tool V0 --> 
-	<div id="LIUEC_ManagementTool_V0">
-		<h2>LIUEC Management Tool V0</h2>
-		<p>This was the original management tool. It utilizes Google Calendar API. (No longer in service)</p>
-		<p>The stie is available at this link:</p><a href="https://jliu1272.github.io/calendarForm/">www.calendarform.com</a></div>
-		<br/>
-		<strong>Configuration Environment:</strong>
-		   <br/>- Google Calendar API
-		   <br/>- Javascript
-		</p>
-		<h3>Demonstration</h3>
-		<video controls="controls" width="100%" height="100%" name="Calendar Form Demo" src="images/photos/calendar_form.mov"></video>
-	</div>
+		<!-- LIUEC Management Tool V0 --> 
+		<div id="LIUEC_ManagementTool_V0">
+			<h2>LIUEC Management Tool V0 (2016)</h2>
+			<p>This was the original management tool. It utilizes Google Calendar API. (No longer in service)</p>
+			<p>The stie is available at this link:</p><a href="https://jliu1272.github.io/calendarForm/">www.calendarform.com</a>
+			<br/>
+			<strong>Configuration Environment:</strong>
+			   <br/>- Google Calendar API
+			   <br/>- Javascript
+			</p>
+			<h3>Demonstration</h3>
+			<video controls="controls" width="100%" height="100%" name="Calendar Form Demo" src="images/photos/calendar_form.mov"></video>
+		</div>
 
-	<!-- Octopus E-Wallet Prototype --> 
-	<div id="Octopus_E_Wallet">
-		<h2>Prototyped a E-Wallet System for Octopus (A company based in HK)</h2>
-		<p>
-			In Hong Kong, Octopus is a major means of payment for many of us, especially on a subway. Octopus is considered a FinTech company in Hong Kong. It was originated to allow consumers to pay using a RFID based card. This payment is available in many different places such as grocery stores, subway etc…
-		</p>	 
-		<p>
-			I created a prototype version demonstrating how Octopus can be transformed from being a RFID to a NFC based card. In other words, transforming Octopus to be an E-Wallet system. However, I did not realize that they had already built something similar and far better than what I could envision. Despite my lack of research on this matter, they were kind enough to invite me to their headquarter for a visit and taught me a lot about their design and factors they had to consider while building such an e-wallet system. 
-		</p>
-		<h3>Technologies Used</h3>
-		<ul>
-			<li>NFC/RFID Adafruit Shield</li>
-			<li>Arduino Board</li>
-			<li>Android Development (Java)</li>
-			<li>Flask for API</li>
-			<li>SQL for DB</li>
-		</ul>
+		<!-- Octopus E-Wallet Prototype --> 
+		<div id="Octopus_E_Wallet">
+			<h2>Prototyped a E-Wallet System for Octopus Limited HK (2017)</h2>
+			<p>
+				In Hong Kong, Octopus is a major means of payment for many of us, especially on a subway. Octopus is considered a FinTech company in Hong Kong. It was originated to allow consumers to pay using a RFID based card. This payment is available in many different places such as grocery stores, subway etc…
+			</p>	 
+			<p>
+				I created a prototype version demonstrating how Octopus can be transformed from being a RFID to a NFC based card. In other words, transforming Octopus to be an E-Wallet system. However, I did not realize that they had already built something similar and far better than what I could envision. Despite my lack of research on this matter, they were kind enough to invite me to their headquarter for a visit and taught me a lot about their design and factors they had to consider while building such an e-wallet system. 
+			</p>
+			<h3>Technologies Used</h3>
+			<ul>
+				<li>NFC/RFID Adafruit Shield</li>
+				<li>Arduino Board</li>
+				<li>Android Development (Java)</li>
+				<li>Flask for API</li>
+				<li>SQL for DB</li>
+			</ul>
 
-		<p>Below is a paper describing the implementation, logistics, and technological consideration of this project</p>
-		<ul class="actions fit">
-			<li><a href="images/write_ups/PhoneDrivenPayment_Octopus.pdf" class="button fit">Octopus E-Wallet Proposal</a></li>
-		</ul>	
-		<h3>Demonstration of Prototype</h3>
-		<iframe src="https://player.vimeo.com/video/253318193" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p><a href="https://vimeo.com/253318193">Octopus E-Wallet System Demo</a> from <a href="https://vimeo.com/user11660598">Jennifer</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-	</div>
+			<p>Below is a paper describing the implementation, logistics, and technological consideration of this project</p>
+			<ul class="actions fit">
+				<li><a href="images/write_ups/PhoneDrivenPayment_Octopus.pdf" class="button fit">Octopus E-Wallet Proposal</a></li>
+			</ul>	
+			<h3>Demonstration of Prototype</h3>
+			<iframe src="https://player.vimeo.com/video/253318193" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p><a href="https://vimeo.com/253318193">Octopus E-Wallet System Demo</a> from <a href="https://vimeo.com/user11660598">Jennifer</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+		</div>
 
-	<!-- Youtube Randomizer --> 
-	<div id="youtube_randomizer">
-		<h3>Youtube Randomizer 2016</h3>
-		<p>My friend and I were failing this musically class miserably. We decided to create a program that would store multiple songs (provided by youtube links). When the randomize button is pressed it would play a randomly selected song, chosen from the given links, and play at a random time. Essentially, we used our computer skills to simulate the testing environment constructed by our music teacher. (No Longer in service)
-		</p><br/>	
-		<a href="https://jliu1272.github.io/youtubeRandomizer-/">youtubeRandomizer.com</a>
+		<!-- Youtube Randomizer --> 
+		<div id="youtube_randomizer">
+			<h3>Youtube Randomizer 2016</h3>
+			<p>My friend and I were failing this musically class miserably. We decided to create a program that would store multiple songs (provided by youtube links). When the randomize button is pressed it would play a randomly selected song, chosen from the given links, and play at a random time. Essentially, we used our computer skills to simulate the testing environment constructed by our music teacher. (No Longer in service)
+			</p><br/>	
+			<a href="https://jliu1272.github.io/youtubeRandomizer-/">youtubeRandomizer.com</a>
+		</div>
 	</div>
 </body>
 </html>

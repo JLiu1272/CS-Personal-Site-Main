@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="style.css">-->
+	<title>Jennifer Liu Personal Site</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Header -->
@@ -9,114 +15,112 @@
 		<center><h1>Jennifer Liu's （廖智盈）Personal Site</h1></center>
 		<center><p>A maker, a lifelong learner, a tech enthusiast</p></center>
 
-		<div class="navbar">
-		  <a href="index.html">About</a>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">AI/ML Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="ds_project.html#GPS_Classifier">GPS Classifier</a>
-		      <a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a>
-		      <a href="ds_project.html#Language_Prediction">Language Prediction</a>
-		      <a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a>
-		      <a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a>
-		    </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="index.html">About</a></li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">AI/ML Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="ds_project.html#GPS_Classifier">GPS Classifier</a></li>
+		          <li><a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a></li>
+		          <li><a href="ds_project.html#Language_Prediction">Language Prediction</a></li>
+		          <li><a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a></li>
+		          <li><a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software Engineer Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a></li>
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a></li>
+		          <li><a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a></li>
+		          <li><a href="se_project.html#youtube_randomizer">Youtube Randomizer</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SMIF (Coming Soon) <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="smif_startup.html#about_smif">About SMIF</a></li>
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">Prototype</a></li>-->
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">We are hiring</a></li>-->
+		        </ul>
+		      </li>
+		      <li><a href="internship.html">Internship</a></li>
+		      <li><a href="resume.html">Resume</a></li>
+		    </ul>
 		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="se_project.html">Software Engineer Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a>
-		      <a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a>
-		      <a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a>
-		      <a href="se_project.html#youtube_randomizer">Youtube Randomizer</a>
-		    </div>
-		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">SMIF (Coming Soon)
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="smif_startup.html#about_smif">About SMIF</a>
-		      <!--<a href="#">Prototype</a>-->
-		      <!--<a href="#">We are hiring</a>-->
-		    </div>
-		  </div>
-		  <a href="internship.html">Internship</a>
-		  <a href="resume.html">Resume</a> 
-		</div>
+		</nav>
 	</div>
 
 	<center><h1 id="about">Internship Experience</h1></center>
-	<div class="timeline">
-	  <!-- Tencent --> 	
-	  <div class="container left">
-	    <div class="content">
-	      <h2>Tencent - 2019 Summer</h2>
-	      <p>This summer, I am really excited to announce that I will be working for Tencent in Shenzhen. I will be working for the Wechat Pay team as a Software Engineer.</p>
-	    </div>
-	  </div>
 
-	  <!-- Octopus --> 
-	  <div class="container right">
-	    <div class="content">
-	      <h2>Octopus Limited Hong Kong - 2018 Summer</h2>
-	      <p>Position: Embedded Software Engineer Intern</p>
-	      <p>I had the opportunity to work for Octopus Limited last summer. I was placed on their front-end team, which was the team that maintains and makes the hardware and software for RFID/NFC payment transaction on various vendor locations. The vendor locations include Subways, boutique shops, 7-11 etc...</p>
-	      <strong> Project 1: "全城Wi-Fi" (Translated: Wi-Fi All Across Hong Kong")</strong>
-	      <ul>
-	      	<li>Project Proposal: Allow citizens to use Wi-Fi on the bus. This is done by enabling a dual function on the payment hardware (which is available on all buses in Hong Kong). The hardware not only is capable of receiving payments, but it should also be able to handle Wi-Fi signals</li>
-	      	<li>I worked on writing scripts to stress test the Wi-Fi signal. The stress test criteria included; Wi-Fi works for prolong period, Wi-Fi speed is adequate even when multiple devices are using the Wi-Fi simultaneously.</li>
-	      	<li>A script was written to simulate the worse possible environment that the Wi-Fi device may encounter. The script then prints out a report determining whether the test passed the stress test or not. If it fails, it indicates where specifically did it fail</li>
-	      	<li><strong>Technologies Used: </strong>Bash, Busybox (The swiss-knife of embedded systems)</li>
-	      </ul>
-	      <strong>Project 2: Octopus I-Pad Integration </strong>
-	      <center><iframe src="https://player.vimeo.com/video/287880129" width="400" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></center>
-	      <ul>
-	      	<li>Worked on the client-server architecture, which allows an I-Pad to communicate with the hardware</li>
-	      	<li>This application was developed using Java, TCP/IP Protocol (aka socket) to communicate with hardware, and threading concepts to receive real time messages sent from card reader to be displayed on android application.</li>
-	      </ul>
-	      <strong>Project 3: Made updates to their internal software written in C. The internal software is used to show byte allocations on the RFID card.</strong>
-	    </div>
-	  </div>
+	<div class="container">
+		<div class="timeline">
+		  <!-- Tencent --> 	
+		  <div class="container left">
+		    <div class="content">
+		      <h2>Tencent - 2019 Summer</h2>
+		      <p>This summer, I am really excited to announce that I will be working for Tencent in Shenzhen. I will be working for the Wechat Pay team as a Software Engineer.</p>
+		    </div>
+		  </div>
 
-	  <!-- RailComm -->
-	  <div class="container right">
-	    <div class="content">
-	      <h2>RailComm - 2017 Fall Semester</h2>
-	      <p>Position: Embedded Software Engineer Intern.</p>
-	      <p><strong>Project 1:</strong> Developed the entire Website for managing internal hardware stocks using AngularJS, Flask, and Active Directory</p>
-	      <p><strong>Project 2:</strong> Wrote scripts to purge logs older than a certain date on embedded Systems using Bash</p>
-	      <p><strong>Project 3:</strong> Wrote scripts to stress test hardware device using Python</p>
-	      <p><strong>Project 4:</strong> Wrote a program in C to enable byte communication between Varacite board and STM32</p>
-	      <p><strong>Project 5:</strong> Wrote a python program that sends a signal to their custom built hardware indicating hardware is ready for processing</p>
-	    </div>
-	  </div>
+		  <!-- Octopus --> 
+		  <div class="container right">
+		    <div class="content">
+		      <h2>Octopus Limited Hong Kong - 2018 Summer</h2>
+		      <p><strong>Position:</strong> Embedded Software Engineer Intern</p>
+		      <p>I had the opportunity to work for Octopus Limited last summer. I was placed on their front-end team, which was the team that maintains and makes the hardware and software for RFID/NFC payment transaction on various vendor locations. The vendor locations include Subways, boutique shops, 7-11 etc...</p>
+		      <strong> Project 1: "全城Wi-Fi" (Translated: Wi-Fi All Across Hong Kong")</strong>
+		      <ul>
+		      	<li>Project Proposal: Allow citizens to use Wi-Fi on the bus. This is done by enabling a dual function on the payment hardware (which is available on all buses in Hong Kong). The hardware not only is capable of receiving payments, but it should also be able to handle Wi-Fi signals</li>
+		      	<li>I worked on writing scripts to stress test the Wi-Fi signal. The stress test criteria included; Wi-Fi works for prolong period, Wi-Fi speed is adequate even when multiple devices are using the Wi-Fi simultaneously.</li>
+		      	<li>A script was written to simulate the worse possible environment that the Wi-Fi device may encounter. The script then prints out a report determining whether the test passed the stress test or not. If it fails, it indicates where specifically did it fail</li>
+		      	<li><strong>Technologies Used: </strong>Bash, Busybox (The swiss-knife of embedded systems)</li>
+		      </ul>
+		      <strong>Project 2: Octopus I-Pad Integration </strong>
+		      <ul>
+		      	<li>Worked on the client-server architecture, which allows an I-Pad to communicate with the hardware</li>
+		      	<li>This application was developed using Java, TCP/IP Protocol (aka socket) to communicate with hardware, and threading concepts to receive real time messages sent from card reader to be displayed on android application.</li>
+		      </ul>
+		      <center><iframe src="https://player.vimeo.com/video/287880129" width="400" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></center>
+		      <p><strong>Project 3:</strong> Made updates to their internal software written in C. The internal software is used to show byte allocations on the RFID card.</p>
+		    </div>
+		  </div>
 
-	  <!-- OOCL --> 
-	  <div class="container right">
-	    <div class="content">
-	      <h2>Orient Overseas Container Line (Hong Kong) - 2017 Summer</h2>
-	      <p>Position: Systems Engineer Intern</p>
-	      <strong>Project 1: Object Storage's advantage over Block Storage</strong>
-	      <ul>
-	      	<li>I worked on investigating the advantages of Object Storage over Block Storage</li>
-	      	<li>I looked at 2 different ways to implement Object Storage: Ceph vs. Swift</li>
-	      	<li>I wrote a Java and Node.js program demonstrating the advantages of using Object Storage in the File System level</li>
-	      	<li>The demonstration shows that Object storage is able to manage unstructured data (documents, music, videos) more effectively.</li>
-	      </ul>
-	      <strong>Project 2: Integrating Reddis with Flask</strong>
-	      <ul>
-	      	<li>I was asked to integrate Reddis with Flask. However, at the time, Flask did not have the Redis setting that we wanted. Therefore, a colleage and I worked together to allow this Reddis setting to operate properly with Flask</li>
-	      </ul>
-	      <strong>Project 3: Data Analytics with Splunk</strong>
-	      <ul>
-	      	<li>We used Splunk to monitor servers. (i.e server usage frequency, CPU usage, time the server is most frequently used etc..). The logging tool also showed reasons for server outage.</li>
-	      </ul>
-	    </div>
-	  </div>
+		  <!-- RailComm -->
+		  <div class="container right">
+		    <div class="content">
+		      <h2>RailComm - 2017 Fall Semester</h2>
+		      <p><strong>Position:</strong> Embedded Software Engineer Intern.</p>
+		      <p><strong>Project 1:</strong> Developed the entire Website for managing internal hardware stocks using AngularJS, Flask, and Active Directory</p>
+		      <p><strong>Project 2:</strong> Wrote scripts to purge logs older than a certain date on embedded Systems using Bash</p>
+		      <p><strong>Project 3:</strong> Wrote scripts to stress test hardware device using Python</p>
+		      <p><strong>Project 4:</strong> Wrote a program in C to enable byte communication between Varacite board and STM32</p>
+		      <p><strong>Project 5:</strong> Wrote a python program that sends a signal to their custom built hardware indicating hardware is ready for processing</p>
+		    </div>
+		  </div>
+
+		  <!-- OOCL --> 
+		  <div class="container right">
+		    <div class="content">
+		      <h2>Orient Overseas Container Line (Hong Kong) - 2017 Summer</h2>
+		      <p><strong>Position:</strong> Systems Engineer Intern</p>
+		      <strong>Project 1: Object Storage's advantage over Block Storage</strong>
+		      <ul>
+		      	<li>I worked on investigating the advantages of Object Storage over Block Storage</li>
+		      	<li>I looked at 2 different ways to implement Object Storage: Ceph vs. Swift</li>
+		      	<li>I wrote a Java and Node.js program demonstrating the advantages of using Object Storage in the File System level</li>
+		      	<li>The demonstration shows that Object storage is able to manage unstructured data (documents, music, videos) more effectively.</li>
+		      </ul>
+		      <strong>Project 2: Integrating Reddis with Flask</strong>
+		      <ul>
+		      	<li>I was asked to integrate Reddis with Flask. However, at the time, Flask did not have the Redis setting that we wanted. Therefore, a colleage and I worked together to allow this Reddis setting to operate properly with Flask</li>
+		      </ul>
+		      <strong>Project 3: Data Analytics with Splunk</strong>
+		      <ul>
+		      	<li>We used Splunk to monitor servers. (i.e server usage frequency, CPU usage, time the server is most frequently used etc..). The logging tool also showed reasons for server outage.</li>
+		      </ul>
+		    </div>
+		  </div>
+		</div>
 	</div>
 </body>
 </html>

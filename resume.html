@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="style.css">-->
+	<title>Jennifer Liu Personal Site</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Header -->
@@ -9,47 +15,44 @@
 		<center><h1>Jennifer Liu's （廖智盈）Personal Site</h1></center>
 		<center><p>A maker, a lifelong learner, a tech enthusiast</p></center>
 
-		<div class="navbar">
-		  <a href="index.html">About</a>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">AI/ML Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="ds_project.html#GPS_Classifier">GPS Classifier</a>
-		      <a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a>
-		      <a href="ds_project.html#Language_Prediction">Language Prediction</a>
-		      <a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a>
-		      <a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a>
-		    </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="index.html">About</a></li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">AI/ML Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="ds_project.html#GPS_Classifier">GPS Classifier</a></li>
+		          <li><a href="ds_project.html#Recipe_Replacement">Recipe Replacement</a></li>
+		          <li><a href="ds_project.html#Language_Prediction">Language Prediction</a></li>
+		          <li><a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a></li>
+		          <li><a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software Engineer Projects <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a></li>
+		          <li><a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a></li>
+		          <li><a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a></li>
+		          <li><a href="se_project.html#youtube_randomizer">Youtube Randomizer</a></li>
+		        </ul>
+		      </li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SMIF (Coming Soon) <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="smif_startup.html#about_smif">About SMIF</a></li>
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">Prototype</a></li>-->
+		          <!--<li><a href="se_project.html#LIUEC_ManagementTool_V0">We are hiring</a></li>-->
+		        </ul>
+		      </li>
+		      <li><a href="internship.html">Internship</a></li>
+		      <li><a href="resume.html">Resume</a></li>
+		    </ul>
 		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="se_project.html">Software Engineer Projects 
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="se_project.html#LIUEC_ManagementTool_V1">LIUEC ManagementTool V1</a>
-		      <a href="se_project.html#LIUEC_ManagementTool_V0">LIUEC ManagementTool V0</a>
-		      <a href="se_project.html#Octopus_E_Wallet">Octopus E-Wallet Prototype</a>
-		      <a href="se_project.html#youtube_randomizer">Youtube Randomizer</a>
-		    </div>
-		  </div>
-		  <div class="dropdown">
-		    <button class="dropbtn" href="ds_project.html">SMIF (Coming Soon)
-		      <i class="fa fa-caret-down"></i>
-		    </button>
-		    <div class="dropdown-content">
-		      <a href="smif_startup.html#about_smif">About SMIF</a>
-		      <!--<a href="#">Prototype</a>-->
-		      <!--<a href="#">We are hiring</a>-->
-		    </div>
-		  </div>
-		  <a href="internship.html">Internship</a>
-		  <a href="resume.html">Resume</a> 
-		</div>
+		</nav>
 	</div>
 
 	<center><h1 id="about">Resume</h1></center>
-	<embed src="images/write_ups/Jennifer_Liu_CV_Recent.pdf" type="application/pdf" width="100%" height="1000px" />
+	<div class="container">
+		<embed src="images/write_ups/Jennifer_Liu_CV_Recent.pdf" type="application/pdf" width="100%" height="1000px" />
+	</div>
 </body>
 </html>
