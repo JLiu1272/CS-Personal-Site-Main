@@ -30,6 +30,8 @@
 		          <li><a href="ds_project.html#Language_Prediction">Language Prediction</a></li>
 		          <li><a href="ds_project.html#PathPlanning">Marathon Runner Route Planning</a></li>
 		          <li><a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a></li>
+		          <li><a href="ds_project.html#Word_Sense_Disambiguation">Word Sense Disambiguation</a></li>
+		          <li><a href="ds_project.html#Word_Sense_Disambiguation">Sentiment Analysis</a></li>
 		        </ul>
 		      </li>
 		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software Engineer Projects <span class="caret"></span></a>
@@ -99,6 +101,66 @@
 			<br/>
 			<strong>Link to Github</strong>
 			<a href="https://github.com/JLiu1272/RecipeSubsitutionUsingWordEmbedding">Research Github</a>
+		</div>
+
+		<!-- Word Sense Disambiguation --> 
+		<div id="Word_Sense_Disambiguation">
+			<h2>Word Sense Disambiguation using Decision List</h2>
+			<p>The program determines the sense of a word based on context using Decision List proposed by David Yarowsky. The implementation was based on this paper <a href="https://www.aclweb.org/anthology/P94-1013">Decision Lists for Lexical Ambiguity Resolution</a>. In this paper, the author used WSD method to differentiate between two different types of accent. We apply this same method to predict the sense of words. (BASS vs. SAKE)</a></p>
+			<p>Currently, the implementation is only capable of determining two word sense (BASS and SAKE). The dataset used for training this decision list is obtained from R.Sproat textbook.</p>
+			<strong>How does Decision List work ?</strong>
+			<p>We create multiple collocation types based on data. Collocation types used are the window size, the Part of Speech tag of a word, and single words. Using these collocations, multiple if statements are created. The order in which the if statement is traversed is based on the Log-Likelihood of the Decision List. When given a new sentence that contains either a "Bass" or "Sake", it traverses through the if-statements in the sorted order, and returns the result of the if statement. If no match is found, it returns the majority rule. For the word "Bass", there were more sentences that had the musical meaning in the training data. Therefore, if no "if-statements" match, it would default to have the "musical" sense.</p>
+			<strong>Log Likelihood Equation</strong>
+			<img src="images/photos/wsd/log_likelihood.png" width="50%" height="50%">
+			<p>Here is an example. If we were given the sentence, "Stephan Weidner, the composer and bass player for Boehse Onkelz, a", a window size of 2 collocation will generate a list like this; [2_window_composer, 2_window_and, 2_window_player, 2_window_for]. A collocation using Part of Speech tag will replace the respective word with the part of speech of the word based on its context. For example, it may generate a rule like this; -2_tag_noun because composer is a noun, and composer is 2 words left of "bass". A collocation using single words will only consider the word that is n words away from bass. For example, if we are creating a collocation using 2 words to the left, it will only consider composer. Hence, it will generate a rule like this; -2_word_composer.  
+			<br/>
+			<strong>Summary of Collocations considered</strong>
+			<ul>
+				<li>Word immediately to the right (+1 W)</li>
+				<li>Word immediately to the left (-1 W)</li>
+				<li>Word found in (+/- 5) word window (+/)</li>
+				<li>Part of Speech Tag of word to the right (Tag + 1 W)</li>
+				<li>Part of Speech Tag of word to the left (Tag -1 W)</li>
+			</ul>
+			<strong>Decision made during Cleaning Corpus:</strong>
+			<ul>
+				<li>Removed punctuations</li>
+				<li>I noticed that there were some xml tags such as <Doc=XXX>. I decided to remove those</li>
+				<li>I also removed the dashes in compound words such as 7-pound and concatenated these 2 words together. Resulting in 7pound.</li>
+			</ul>
+			<h3>Word Sense Disambiguation Results</h3>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5"><img src="images/photos/wsd/base_example.png" height="100%" width="100%"></div>
+    				<div class="col-sm-5"><img src="images/photos/wsd/sake_example.png" height="100%" width="100%"></div>
+				</div>
+				<div class="row">
+					<h3>Accuracy, Baseline, and Confusion Matrix</h3>
+					<p>This table shows the accuracy when predicting on testing data, and it also shows the baseline accuracy for the two words</p>
+					<div class="col-sm-5"><img src="images/photos/wsd/wsd_baseline.png" height="100%" width="100%"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5"><img src="images/photos/wsd/confusion_matrix.png" alt="Stop Classifier Evidence" height="100%" width="100%"></div>
+				</div>
+			</div>
+			<br/>
+			<strong>Link to Github: </strong>
+			<a href="https://github.com/JLiu1272/WordSenseDisambiguation">WSD Github</a>
+		</div>
+
+		<!-- Sentiment Analysis on Unbalanced Data --> 
+		<div id="Sentiment_Analysis">
+			<h2>Sentiment Analysis, Genre Prediction, Topic Prediction on Unbalanced Data</h2>
+			<p>The data set contains sentences extracted from reviews about products, movies, and resources. The sources of review came from IMDB, Amazon, and Yelp. We were ask to complete 3 Tasks.</p>
+			<p><strong>Teammates: </strong>Oliver Olonzo, Josh Bickings</p>
+			<ul>
+				<li>Task 1: Predict the polarity of the review (Positive, Negative, Neutral).</li>
+				<li>Task 2: Predict the event classes/types (i.e Attending_event, Communication_issue, Going_to_places, Legal_issue, None, Money_issue, Outdoor_activity, Personal_care, (Fear_of_Physical_pain)</li>
+				<li>Task 3: Identify the source of genre of sentence (2 genre available: genre A or genre B)</li>
+			</ul>
+			<strong>Implementation Details and Results Available Below:</strong>
+			<a href="images/write_ups/OliverAlonzo_JoshBickings_JenniferLiu_SciKitBlackBelt.pdf" class="button fit">Sentiment Analysis Implementation Approach and Results</a>
+			<br/>
 		</div>
 
 		<!-- Language Prediction --> 
