@@ -32,6 +32,7 @@
 		          <li><a href="ds_project.html#DM_Fundamentals">Data Mining Fundamentals Concepts Implementations</a></li>
 		          <li><a href="ds_project.html#Word_Sense_Disambiguation">Word Sense Disambiguation</a></li>
 		          <li><a href="ds_project.html#Word_Sense_Disambiguation">Sentiment Analysis</a></li>
+							<li><a href="ds_project.html#detect_groceries">Detect Groceries</a></li>
 		        </ul>
 		      </li>
 		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software Engineer Projects <span class="caret"></span></a>
@@ -65,7 +66,7 @@
 			<p>We were given a set of GPS data, and were asked to predict when a car
 			   stopped due to a stop sign or traffic light, and when a car turned left or right. Additionally, the GPS data was made of many paths, to eliminate the clutters, K-Means was used to agglomerate paths and remove issues related to dilution of precision.</p>
 			<p><strong>Methods Used:</strong> DBScan, K-Means, Decision Tree</p>
-			<p><strong>Teammates:</strong> Joe Golden, Niccolo Dehicchio</p> 
+			<p><strong>Teammates:</strong> Joe Golden, Niccolo Dehicchio</p>
 			<h3>Classifier Results</h3>
 			<div class="container">
 				<div class="row">
@@ -87,7 +88,7 @@
 			<a href="https://github.com/JLiu1272/csci420_proj1">GPS Predictions Github</a>
 		</div>
 
-		<!-- Recipe Replacement --> 
+		<!-- Recipe Replacement -->
 		<div id="Recipe_Replacement">
 			<h2>Using Word Embedding to automate Recipe Replacement (2018)</h2>
 			<p>In this project, we explore the possibility of creating a model that can identify replacement for an ingredient. For instance, if the query was butter, it should discover that margarine is similar to butter, so that is 1 potential replacement. The applications for this are numerous: along with aiding individuals with allergies and dietary restrictions, this can also help cooks understand how to use ingredients they already have. The idea is to transform ingredients into embeddings. With ingredients represented as embeddings, cosine similarity can be used to find the closest replacement.
@@ -103,7 +104,7 @@
 			<a href="https://github.com/JLiu1272/RecipeSubsitutionUsingWordEmbedding">Research Github</a>
 		</div>
 
-		<!-- Word Sense Disambiguation --> 
+		<!-- Word Sense Disambiguation -->
 		<div id="Word_Sense_Disambiguation">
 			<h2>Word Sense Disambiguation using Decision List</h2>
 			<p>The program determines the sense of a word based on context using Decision List proposed by David Yarowsky. The implementation was based on this paper <a href="https://www.aclweb.org/anthology/P94-1013">Decision Lists for Lexical Ambiguity Resolution</a>. In this paper, the author used WSD method to differentiate between two different types of accent. We apply this same method to predict the sense of words. (BASS vs. SAKE)</a></p>
@@ -112,7 +113,7 @@
 			<p>We create multiple collocation types based on data. Collocation types used are the window size, the Part of Speech tag of a word, and single words. Using these collocations, multiple if statements are created. The order in which the if statement is traversed is based on the Log-Likelihood of the Decision List. When given a new sentence that contains either a "Bass" or "Sake", it traverses through the if-statements in the sorted order, and returns the result of the if statement. If no match is found, it returns the majority rule. For the word "Bass", there were more sentences that had the musical meaning in the training data. Therefore, if no "if-statements" match, it would default to have the "musical" sense.</p>
 			<strong>Log Likelihood Equation</strong>
 			<img src="images/photos/wsd/log_likelihood.png" width="50%" height="50%">
-			<p>Here is an example. If we were given the sentence, "Stephan Weidner, the composer and bass player for Boehse Onkelz, a", a window size of 2 collocation will generate a list like this; [2_window_composer, 2_window_and, 2_window_player, 2_window_for]. A collocation using Part of Speech tag will replace the respective word with the part of speech of the word based on its context. For example, it may generate a rule like this; -2_tag_noun because composer is a noun, and composer is 2 words left of "bass". A collocation using single words will only consider the word that is n words away from bass. For example, if we are creating a collocation using 2 words to the left, it will only consider composer. Hence, it will generate a rule like this; -2_word_composer.  
+			<p>Here is an example. If we were given the sentence, "Stephan Weidner, the composer and bass player for Boehse Onkelz, a", a window size of 2 collocation will generate a list like this; [2_window_composer, 2_window_and, 2_window_player, 2_window_for]. A collocation using Part of Speech tag will replace the respective word with the part of speech of the word based on its context. For example, it may generate a rule like this; -2_tag_noun because composer is a noun, and composer is 2 words left of "bass". A collocation using single words will only consider the word that is n words away from bass. For example, if we are creating a collocation using 2 words to the left, it will only consider composer. Hence, it will generate a rule like this; -2_word_composer.
 			<br/>
 			<strong>Summary of Collocations considered</strong>
 			<ul>
@@ -148,7 +149,7 @@
 			<a href="https://github.com/JLiu1272/WordSenseDisambiguation">WSD Github</a>
 		</div>
 
-		<!-- Sentiment Analysis on Unbalanced Data --> 
+		<!-- Sentiment Analysis on Unbalanced Data -->
 		<div id="Sentiment_Analysis">
 			<h2>Sentiment Analysis, Genre Prediction, Topic Prediction on Unbalanced Data</h2>
 			<p>The data set contains sentences extracted from reviews about products, movies, and resources. The sources of review came from IMDB, Amazon, and Yelp. We were ask to complete 3 Tasks.</p>
@@ -163,7 +164,7 @@
 			<br/>
 		</div>
 
-		<!-- Language Prediction --> 
+		<!-- Language Prediction -->
 		<div id="Language_Prediction">
 			<h2>Predicting language of text (Dutch/English) using Decision Tree and Adaboost (2018)</h2>
 			<p>The purpose of this program is to determine whether the sentence is Dutch of English using Decision Tree and Adaboost.</p>
@@ -199,7 +200,7 @@
 			<a href="images/write_ups/shortestPath_Paper.pdf">Shortest Path for Marathon Runner Paper</a>
 		</div>
 
-		<!-- Data Mining Fundamental Concepts Implementations --> 
+		<!-- Data Mining Fundamental Concepts Implementations -->
 		<div id="DM_Fundamentals">
 			<h2>Implementation of Fundamental Data Mining Concepts from Scratch (2018)</h2>
 			<h3>Concepts implemented include:</h3>
@@ -226,8 +227,21 @@
 			<h3>PCA Visual Results</h3>
 			<a href="https://github.com/JLiu1272/DataMiningFundamentals/blob/master/PCA_and_KNN.py">PCA Github Code</a>
 			<br/>
-			<p>First, we agglomerated the data points. Then, we used PCA to project 120 Dimensional data to 3 Dimension. After projecting it, we were able to visualise it as a 3D plot</p> 
+			<p>First, we agglomerated the data points. Then, we used PCA to project 120 Dimensional data to 3 Dimension. After projecting it, we were able to visualise it as a 3D plot</p>
 			<img src="images/photos/PCA_Agglomeration.png" width="100%" height="100%">
+		</div>
+		<!-- Detecting Groceries -->
+		<div id="detect_groceries">
+			<h3>Grocery Detection using Google's Object Detection API</h3>
+			<p>Next up: Implementing it from scratch</p>
+			<iframe src="https://player.vimeo.com/video/357968372" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			<p><a href="https://vimeo.com/357968372">Detect an Orange</a> from <a href="https://vimeo.com/user11660598">Jennifer</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5"><img src="images/object_detection/orange_detected1.png" alt="Object Detection Results" height="100%" width="100%"></div>
+					<div class="col-sm-5"><img src="images/object_detection/orange_detected2.png" alt="Object Detection Results" height="100%" width="100%"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
